@@ -3,7 +3,7 @@ Information about contribution rules, legal things and projects for our Open Sou
 
 ### License & Copyright
 
-Our Open Source projects are licensed under the [MIT](LICENSE.md) license.
+Our Open Source projects are licensed under the [MIT](LICENSE.md) license (unless stated otherwise).
 
 ### Contributions
 
