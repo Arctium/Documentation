@@ -297,7 +297,7 @@ csharp_indent_switch_labels = true
 #   insert a new-line before "finally",
 #   insert a new-line before members in anonymous-types,
 #   insert a new-line before members in object-initializers,
-#   insert a new-line before all open braces except anonymous methods, anonymous types, lambdas, and object collections and
+#   insert a new-line before all open braces and
 #   insert a new-line within query expression clauses
 ###############################################################################
 [*.cs]
@@ -306,19 +306,19 @@ csharp_new_line_before_else = true
 csharp_new_line_before_finally = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_before_members_in_object_initializers = true
-csharp_new_line_before_open_brace = accessors, control_blocks, events, indexers, local_functions, methods, properties, types
+csharp_new_line_before_open_brace = all
 csharp_new_line_within_query_expression_clauses = true
 
 ###############################################################################
 # Set csharp preferences to:
-#   require braces,
+#   do not require braces,
 #   require simple default expressions,
 #   require simple using statements,
 #   require static local functions,
 #   require a preferred modifier order,
 ###############################################################################
 [*.cs]
-csharp_prefer_braces = true:error
+csharp_prefer_braces = false:suggestion
 csharp_prefer_simple_default_expression = true:error
 csharp_prefer_simple_using_statement = true:error
 csharp_prefer_static_local_function = true:error
@@ -417,7 +417,7 @@ csharp_space_between_square_brackets = false
 #   require a discard variable for unused assignments,
 #   require a discard variable for unused value expression statements,
 #
-#   require var when the type is not apparent,
+#   do not require var when the type is not apparent,
 #   require var for built-in types, and
 #   require var when the type is apparent
 ###############################################################################
@@ -456,8 +456,8 @@ csharp_style_throw_expression = true:error
 csharp_style_unused_value_assignment_preference = discard_variable:error
 csharp_style_unused_value_expression_statement_preference = discard_variable:error
 
-csharp_style_var_elsewhere = true:error
-csharp_style_var_for_built_in_types = csharp_style_var_when_type_is_apparent:error
+csharp_style_var_elsewhere = false:suggestion
+csharp_style_var_for_built_in_types = true:error
 csharp_style_var_when_type_is_apparent = true:error
 
 ###############################################################################
