@@ -54,7 +54,7 @@ charset = utf-16le
 # Set file header template to the specified text
 ###############################################################################
 [*.cs]
-file_header_template = Copyright © Tanner Gooding and Contributors. Licensed under the MIT License (MIT). See License.md in the repository root for more information.
+file_header_template = Copyright © Arctium.\nLicensed under the MIT License (MIT). See License.md file in the repository root for more information.
 
 ###############################################################################
 # Set dotnet diagnostic rules to:
@@ -74,7 +74,7 @@ dotnet_diagnostic.CA5394.severity = none
 #    require interfaces be pascal case prefixed with I
 #    require locals be camel case
 #    require parameters be camel case
-#    require private and internal static fields be camel case and prefixed with s and underscore
+#    require private and internal static fields be camel case
 #    require private and internal fields be camel case and prefixed with underscore
 #    require public and protected declarations be pascal case
 #    require static readonly declarations be pascal case
@@ -102,7 +102,7 @@ dotnet_naming_rule.parameters_should_be_camel_case.style = camel_case
 dotnet_naming_rule.parameters_should_be_camel_case.symbols = parameters
 
 dotnet_naming_rule.private_and_internal_static_fields_should_be_camel_case_prefixed_with_s_and_underscore.severity = error
-dotnet_naming_rule.private_and_internal_static_fields_should_be_camel_case_prefixed_with_s_and_underscore.style = camel_case_prefixed_with_s_and_underscore
+dotnet_naming_rule.private_and_internal_static_fields_should_be_camel_case_prefixed_with_s_and_underscore.style = camel_case
 dotnet_naming_rule.private_and_internal_static_fields_should_be_camel_case_prefixed_with_s_and_underscore.symbols = private_and_internal_static_fields
 
 dotnet_naming_rule.private_and_internal_fields_should_be_camel_case_prefixed_with_underscore.severity = error
@@ -454,7 +454,7 @@ csharp_style_prefer_switch_expression = true:error
 csharp_style_throw_expression = true:error
 
 csharp_style_unused_value_assignment_preference = discard_variable:error
-csharp_style_unused_value_expression_statement_preference = discard_variable:error
+csharp_style_unused_value_expression_statement_preference = discard_variable:suggestion
 
 csharp_style_var_elsewhere = false:suggestion
 csharp_style_var_for_built_in_types = true:error
