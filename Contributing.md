@@ -21,6 +21,6 @@ You don't have to do this up-front. You can simply clone, fork, and submit your 
 The following file header is used for all Arctium projects. Please use it for new files.
 
 ```
-// Copyright (c) Arctium.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// Copyright © Arctium.
+// Licensed under the MIT License (MIT). See License.md file in the repository root for more information.
 ```
