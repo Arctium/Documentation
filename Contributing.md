@@ -6,7 +6,7 @@ You can contribute to Arctium projects with issues and PRs. Simply filing issues
 
 We always welcome bug reports, API proposals and overall feedback. Here are a few tips on how you can make reporting your issue as effective as possible.
 
-### Contribution
+## Contribution
 
 ### Contributor License Agreement
 
@@ -16,6 +16,13 @@ The agreement: [arctium-contribution-license-agreement.pdf](arctium-contribution
 
 You don't have to do this up-front. You can simply clone, fork, and submit your pull-request as usual. When your pull-request is created, it is classified by a CLA bot. If the change is trivial (for example, you just fixed a typo), then the PR is labelled with `cla-not-required`. Otherwise it's classified as `cla-required`. Once you signed a CLA, the current and all future pull-requests will be labelled as `cla-signed`.
 
+### Line Endings
+
+- Please be sure to make use of **"Unix-like"** line endings `\n`.
+- Every file should end with an empty newline.
+
+Our provided [EditorConfig](.editorconfig) file should help with that.
+
 ### File Headers
 
 The following file header is used for all Arctium projects. Please use it for new files.
@@ -24,3 +31,32 @@ The following file header is used for all Arctium projects. Please use it for ne
 // Copyright © Arctium.
 // Licensed under the MIT License (MIT). See License.md file in the repository root for more information.
 ```
+
+### Global Usings
+
+We make use of some global usings to define our own types or to prevent excessive usings in file headers.
+Please make sure to include those in every project root in a file named `GlobalUsings.cs`
+
+```
+// Copyright © Arctium.
+// Licensed under the MIT License (MIT). See License.md file in the repository root for more information.
+
+global using int8 = System.SByte;
+global using int16 = System.Int16;
+global using int32 = System.Int32;
+global using int64 = System.Int64;
+global using int128 = System.Int128;
+
+global using uint8 = System.Byte;
+global using uint16 = System.UInt16;
+global using uint32 = System.UInt32;
+global using uint64 = System.UInt64;
+global using uint128 = System.UInt128;
+
+global using float16 = System.Half;
+```
+
+### Type Usages
+
+When using internal runtime types be sure to use those defined in the `GlobalUsings.cs` file.
+
