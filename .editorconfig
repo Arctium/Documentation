@@ -29,19 +29,10 @@ trim_trailing_whitespace = true
 
 ###############################################################################
 # Set file behavior to:
-#   2 space indentation
+#   3 space indentation
 ###############################################################################
-[*.{cmd,config,csproj,json,props,ps1,resx,sh,targets,yml}]
-indent_size = 2
-
-###############################################################################
-# Set file behavior to:
-#   Windows-style line endings, and
-#   tabular indentation
-###############################################################################
-[*.sln]
-end_of_line = crlf
-indent_style = tab
+[*.{cmd,config,csproj,json,props,ps1,resx,sh,targets,yml,xml}]
+indent_size = 3
 
 ###############################################################################
 # Set file behavior to:
@@ -109,6 +100,10 @@ dotnet_naming_rule.private_and_internal_fields_should_be_camel_case_prefixed_wit
 dotnet_naming_rule.private_and_internal_fields_should_be_camel_case_prefixed_with_underscore.style = camel_case_prefixed_with_underscore
 dotnet_naming_rule.private_and_internal_fields_should_be_camel_case_prefixed_with_underscore.symbols = private_and_internal_fields
 
+dotnet_naming_rule.protected_fields_should_be_camel_case_prefixed_with_underscore.severity = error
+dotnet_naming_rule.protected_fields_should_be_camel_case_prefixed_with_underscore.style = camel_case_prefixed_with_underscore
+dotnet_naming_rule.protected_fields_should_be_camel_case_prefixed_with_underscore.symbols = protected_fields
+
 dotnet_naming_rule.public_and_protected_declarations_should_be_pascal_case.severity = error
 dotnet_naming_rule.public_and_protected_declarations_should_be_pascal_case.style = pascal_case
 dotnet_naming_rule.public_and_protected_declarations_should_be_pascal_case.symbols = public_and_protected_declarations
@@ -155,6 +150,7 @@ dotnet_naming_style.pascal_case_prefixed_with_t.required_prefix = T
 #   locals
 #   private and internal fields
 #   private and internal static fields
+#   protected fields
 #   public and protected declarations
 #   static readonly declarations
 #   type parameters
@@ -179,8 +175,11 @@ dotnet_naming_symbols.private_and_internal_static_fields.applicable_accessibilit
 dotnet_naming_symbols.private_and_internal_static_fields.applicable_kinds = field
 dotnet_naming_symbols.private_and_internal_static_fields.required_modifiers = static
 
+dotnet_naming_symbols.protected_fields.applicable_accessibilities = protected
+dotnet_naming_symbols.protected_fields.applicable_kinds = field
+
 dotnet_naming_symbols.public_and_protected_declarations.applicable_accessibilities = public, protected
-dotnet_naming_symbols.public_and_protected_declarations.applicable_kinds = namespace, class, struct, enum, property, method, field, event, delegate, local_function
+dotnet_naming_symbols.public_and_protected_declarations.applicable_kinds = namespace, class, struct, enum, property, method, event, delegate, local_function
 
 dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
 
@@ -414,9 +413,6 @@ csharp_space_between_square_brackets = false
 #
 #   require throw expressions,
 #
-#   require a discard variable for unused assignments,
-#   require a discard variable for unused value expression statements,
-#
 #   do not require var when the type is not apparent,
 #   require var for built-in types, and
 #   require var when the type is apparent
@@ -452,9 +448,6 @@ csharp_style_prefer_range_operator = false:error
 csharp_style_prefer_switch_expression = true:error
 
 csharp_style_throw_expression = true:error
-
-csharp_style_unused_value_assignment_preference = discard_variable:error
-csharp_style_unused_value_expression_statement_preference = discard_variable:suggestion
 
 csharp_style_var_elsewhere = false:suggestion
 csharp_style_var_for_built_in_types = true:error
